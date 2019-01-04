@@ -1,1 +1,2 @@
-<product_detail line_id="{{line_id}}"></product_detail>
+<import src="../../template/line_info/line_info" />
+<template is="lineinfo" data="{{...line}}"></template>

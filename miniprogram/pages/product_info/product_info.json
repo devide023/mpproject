@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "产品详情",
   "usingComponents": {
-    "product_detail": "/components/product_detail/product_detail"
+    
   }
 }

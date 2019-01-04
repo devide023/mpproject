@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/products/products",
     "pages/visaservice/visaservice",
     "pages/visa_info/visa_info",
-    "pages/products/products",
     "pages/index/index",
     "pages/my/my",
     "pages/myorders/myorders",

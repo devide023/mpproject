@@ -1,59 +1,25 @@
 var app = getApp();
 Page({
   data: {
-    host: "http://www.yzlcq.com",
+    host: app.globalData.config.imghost,
     inputShowed: false,
     inputVal: "",
-    line_list:[],
-    product_category: [{
-        title: "签证服务",
-        url: "",
-        icon: "fa-id-card-o"
-      },
-      {
-        title: "出境定制旅游",
-        url: "",
-        icon: "fa-flask"
-      },
-      {
-        title: "公商务出行",
-        url: "",
-        icon: "fa-suitcase"
-      },
-      {
-        title: "研学教育",
-        url: "",
-        icon: "fa-university"
-      },
-      {
-        title: "当季热推",
-        url: "",
-        icon: "fa-thermometer-full"
-      }
-    ]
+    line_list: [],
+    product_category: []
   },
-  onLoad: function() {
-    var _this = this;
-    wx.showNavigationBarLoading();
-    wx.showLoading({
-      title: '加载中',
-    });
-      wx.request({
-        url: app.globalData.config.lineUrl,
-        method:"POST",
-        data:{},
-        header: {
-          'content-type': 'application/x-www-form-urlencoded' // 默认值
-        },
-        success(json){
-          wx.hideNavigationBarLoading();
-          wx.hideLoading();
-          console.log(json.data);
-          _this.setData({
-            line_list:json.data.list
-          })
-        }
-      });
+  onLoad: function(options) {
+    console.log(options);
+    let query={};
+    if(Object.keys(options).length==0)
+    {
+      query["pid"]=0;
+    }
+    else
+    {
+      query["pid"] = options.pid
+    }
+    console.log(query);
+    this._get_lines(query);
   },
   showInput: function() {
     this.setData({
@@ -75,5 +41,33 @@ Page({
     this.setData({
       inputVal: e.detail.value
     });
+  },
+  /**
+   * 线路列表
+   */
+  _get_lines(querydata) {
+    var _this = this;
+    wx.showNavigationBarLoading();
+    wx.showLoading({
+      title: '加载中',
+    });
+    wx.request({
+      url: app.globalData.config.lineUrl,
+      method: "POST",
+      data: querydata,
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success(json) {
+        wx.hideNavigationBarLoading();
+        wx.hideLoading();
+        console.log(json.data);
+        let newlist = _this.data.line_list.concat(json.data.list);
+        _this.setData({
+          line_list: newlist
+        });
+      }
+    });
   }
+
 });

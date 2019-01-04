@@ -1,12 +1,37 @@
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    line_id:0
+    line_id:0,
+    line:{}
   },
-
+/**
+ * 线路信息
+ */
+  _get_line(){
+    let _this = this;
+    wx.showLoading({
+      title: '数据加载中',
+    });
+    wx.request({
+      url: app.globalData.config.lineInforUrl,
+      data: { lineid:_this.data.line_id},
+      method: "POST",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success:function(json){
+        console.log(json.data.list);
+        wx.hideLoading();
+        _this.setData({
+          line:json.data.list[0]
+        });
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -16,7 +41,8 @@ Page({
       {
         line_id:options.line_id
       }
-    )
+    );
+    this._get_line();
   },
 
   /**
