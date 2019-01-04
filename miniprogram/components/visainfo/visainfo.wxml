@@ -1,0 +1,32 @@
+<view class="page__bd">
+  <view class='weui-cells__title'>所属国家</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">{{visa_entry.title}}</view>
+    </view>
+  </view>
+  <view class='weui-cells__title'>所需材料</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">{{visa_entry.note}}</view>
+    </view>
+  </view>
+  <view class='weui-cells__title'>价格</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">{{visa_entry.xs_price}}</view>
+    </view>
+  </view>
+  <view class='weui-cells__title'>注意事项</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">提前{{visa_entry.order_day}}天提交材料</view>
+    </view>
+  </view>
+  <view class='weui-cells__title'>温馨提示</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">订单提交成功后需电话或微信联系工作人员,提交签证所需材料。联系电话：023-86357517，微信号：Taojun_T</view>
+    </view>
+  </view>
+</view>

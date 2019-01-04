@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/visaservice/visaservice",
+    "pages/visa_info/visa_info",
+    "pages/products/products",
+    "pages/index/index",
+    "pages/my/my",
+    "pages/myorders/myorders",
+    "pages/wechat_article/wechat_article",
+    "pages/product_info/product_info",
+    "pages/add_client_info/add_client_info",
+    "pages/edit_client_info/edit_client_info"
+  ],
+  "tabBar": {
+    "backgroundColor": "#292929",
+    "selectedColor": "red",
+    "color": "#6e6d6b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/products/products",
+        "iconPath": "images/category.png",
+        "selectedIconPath": "images/category_on.png",
+        "text": "产品订购"
+      },
+      {
+        "pagePath": "pages/visaservice/visaservice",
+        "iconPath": "images/bland.png",
+        "selectedIconPath": "images/bland_on.png",
+        "text": "签证服务"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/message.png",
+        "selectedIconPath": "images/message_on.png",
+        "text": "我"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#292929",
+    "navigationBarTitleText": "定制中心",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#DCDCDC"
+  },
+  "debug": true,
+  "resizable": true,
+  "enablePullDownRefresh": true
+}

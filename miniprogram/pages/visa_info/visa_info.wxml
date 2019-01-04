@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="page__bd">
+    <visa_entry visa-id="{{visa_id}}"></visa_entry>
+    <client_info_list client-data="{{client_list}}" bindremove_client_event="remove_client"></client_info_list>
+    <view class="page__bd page__bd_spacing">
+      <view class="weui-flex btn_bar">
+        <view class="weui-flex__item btn_item">
+          <view class="placeholder">
+            <add_clients_button></add_clients_button>
+          </view>
+
+        </view>
+        <view class="weui-flex__item btn_item">
+          <view class="placeholder">
+            <button type='warn'>提交</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

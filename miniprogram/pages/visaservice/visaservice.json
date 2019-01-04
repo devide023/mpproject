@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "签证服务",
+  "enablePullDownRefresh":true,
+  "usingComponents":{
+    "slide-view":"/components/slide_view/slide_view"
+  }
+}

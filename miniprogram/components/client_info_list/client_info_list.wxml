@@ -1,0 +1,23 @@
+<view class="page__bd">
+  <view class='weui-cells__title'>客人名单</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class='slide' wx:for="{{clientData}}" wx:key="unique">
+      <slide-view width="750" height="110" slide-width="500">
+        <view slot="left" class='l'>
+
+          <view bindtap="getdata" data-index='{{index}}' class="weui-cell weui-cell_access" hover-class="weui-cell_active" style='width:100%'>
+            <view class="weui-cell__hd">
+              <view class="fa fa-user fa-lg fa-fw bg-green" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></view>
+            </view>
+            <view class="weui-cell__bd">{{item.client_name}}</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">{{item.client_sex}}</view>
+          </view>
+
+        </view>
+        <view slot="right" class='r'>
+          <view bindtap='remove_client' data-id="{{index}}" class='delete'>删除</view>
+        </view>
+      </slide-view>
+    </view>
+  </view>
+</view>

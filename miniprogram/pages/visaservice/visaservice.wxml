@@ -1,0 +1,12 @@
+<view class="page">
+  <view class='page__bd'>
+    <!--签证列表-->
+    <navigator wx:for="{{visa_list}}" wx:key="unique" url="/pages/visa_info/visa_info?visa_id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="{{flag_url}}/flags/{{item.flag}}.png" class='flag_img'></image>
+      </view>
+      <view class="weui-cell__bd">{{item.title}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{item.xs_price}}</view>
+    </navigator>
+  </view>
+</view>

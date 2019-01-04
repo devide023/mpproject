@@ -1,0 +1,2 @@
+
+<button type="primary" bindtap="add_client_infomaion">名单录入</button>

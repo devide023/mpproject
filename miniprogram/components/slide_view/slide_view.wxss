@@ -1,0 +1,8 @@
+/* slide-view/slide-view.wxss */
+
+.movable-view {
+  display: flex;
+  direction: row;
+  overflow: hidden;
+}
+

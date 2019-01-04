@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "名单修改",
+  "usingComponents":{
+    "client_info":"/components/edit_clientinfo_component/edit_clientinfo_component"
+  }
+}

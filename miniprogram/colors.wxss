@@ -1,0 +1,12 @@
+.bg-red{
+  color: red;
+}
+.bg-blue{
+  color: blue;
+}
+.bg-green{
+  color: green;
+}
+.bg-yellow{
+  color: yellow;
+}

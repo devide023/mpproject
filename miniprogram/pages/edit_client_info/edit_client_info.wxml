@@ -1,0 +1,1 @@
+<client_info client-info="{{client}}" client-index="{{client_index}}" bindremove_client_event="remove_client"></client_info>

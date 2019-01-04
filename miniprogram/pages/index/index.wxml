@@ -1,0 +1,15 @@
+
+<view class='page'>
+  <view class="page__bd">
+    <view class="weui-grids">
+      <block wx:for="{{list}}" wx:key="unique">
+        <navigator url="/pages/wechat_article/wechat_article?path={{item.path}}" class="weui-grid" hover-class="weui-grid_active">
+          <view class="fa {{item.icon}} fa-3x fa-fw myicon bg-green"></view>
+          <view class="weui-grid__label bg-green">{{item.name}}</view>
+        </navigator>
+      </block>
+    </view>
+    
+  </view>
+</view>
+

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "签证详情",
+  "usingComponents":{
+    "visa_entry":"/components/visainfo/visainfo",
+    "add_clients_button":"/components/add_client_btncom/add_client_btncom",
+    "client_info_list":"/components/client_info_list/client_info_list"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "名单录入",
+  "usingComponents":{
+    "add_clientinfo":"/components/client_info_component/client_info_component"
+  }
+}

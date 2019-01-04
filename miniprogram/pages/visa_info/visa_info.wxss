@@ -1,0 +1,8 @@
+@import "../../slide_view.wxss";
+.btn_bar{
+  margin: 20px 0px 30px 0px;
+}
+.btn_item
+{
+  margin: 0px 10px;
+}
