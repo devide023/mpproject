@@ -1,6 +1,12 @@
 <template name="lineinfo">
   <view class='page'>
     <view class='page__bd'>
+      <view class="weui-cells__title">线路编号</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">{{line_no}}</view>
+        </view>
+      </view>
       <view class="weui-cells__title">产品名称</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
@@ -9,15 +15,36 @@
       </view>
       <view class="weui-cells__title">出发日期</view>
       <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell">
-          <view class="weui-cell__bd">{{departure_time}}</view>
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__bd">
+            <picker bindchange="goTimePickerChange" value="{{gotimeIndex}}" range="{{go_time}}">
+              <view class="weui-select">{{go_time[gotimeIndex]}}</view>
+            </picker>
+          </view>
         </view>
       </view>
-
       <view class="weui-cells__title">行程天数</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">{{days}}</view>
+        </view>
+      </view>
+      <view class="weui-cells__title">供应商名称</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">{{product.supply_name}}</view>
+        </view>
+      </view>
+      <view class="weui-cells__title">产品编号</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">{{product.product_number}}</view>
+        </view>
+      </view>
+      <view class="weui-cells__title">销售价</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">{{product.market_price}}</view>
         </view>
       </view>
 

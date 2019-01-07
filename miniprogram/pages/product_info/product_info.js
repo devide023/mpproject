@@ -1,3 +1,5 @@
+//const product_detail_fn = require('../../template/line_info/line_info.js')
+import product_detail_fn from '../../template/line_info/line_info.js'
 const app = getApp();
 Page({
 
@@ -26,9 +28,18 @@ Page({
       success:function(json){
         console.log(json.data.list);
         wx.hideLoading();
+        if(json.data.state==1)
+        {
         _this.setData({
-          line:json.data.list[0]
-        });
+          'line.product_name': json.data.line_name,
+          'line.line_no': json.data.line_no,
+          'line.days': json.data.days,
+          'line.go_time': json.data.products.map(i=>i.departure_time),
+          'line.gotimeIndex':0,
+          'line.products': json.data.products,
+          'line.product': json.data.products[0]
+          });
+        }
       }
     });
   },
@@ -37,6 +48,8 @@ Page({
    */
   onLoad: function (options) {
     console.log(options);
+    console.log(product_detail_fn);
+    product_detail_fn.initFn(this);
     this.setData(
       {
         line_id:options.line_id
