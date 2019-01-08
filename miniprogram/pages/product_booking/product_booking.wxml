@@ -1,0 +1,12 @@
+<import src="../../template/booking/booking.wxml" />
+<template is="product_booking" data="{{...line,clients}}">
+</template>
+
+<view class="weui-flex" style='margin: 20px 0px 30px 0px;'>
+  <view class="weui-flex__item" style='margin: 0px 10px;'>
+    <button bindtap='add_client' type='primary'>录入名单</button>
+  </view>
+  <view class="weui-flex__item" style='margin: 0px 10px;'>
+    <button bindtap='add_order' type='warn'>提交订单</button>
+  </view>
+</view>

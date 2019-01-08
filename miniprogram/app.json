@@ -9,7 +9,8 @@
     "pages/wechat_article/wechat_article",
     "pages/product_info/product_info",
     "pages/add_client_info/add_client_info",
-    "pages/edit_client_info/edit_client_info"
+    "pages/edit_client_info/edit_client_info",
+    "pages/product_booking/product_booking"
   ],
   "tabBar": {
     "backgroundColor": "#292929",

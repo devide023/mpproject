@@ -49,7 +49,8 @@ Page({
   onLoad: function (options) {
     console.log(options);
     console.log(product_detail_fn);
-    product_detail_fn.initFn(this);
+    //product_detail_fn.initFn(this);
+    new product_detail_fn(this);
     this.setData(
       {
         line_id:options.line_id

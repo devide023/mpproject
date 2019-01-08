@@ -16,7 +16,9 @@ const config = {
   //签证列表
   visaUrl: `${host}/Ashx/DZZXChart/dzzxchart.ashx?type=visalist`,
   //签证详情
-  visainfoUrl: `${host}/Ashx/DZZXChart/dzzxchart.ashx?type=get_visa_info`
+  visainfoUrl: `${host}/Ashx/DZZXChart/dzzxchart.ashx?type=get_visa_info`,
+  //
+  productPriceTypeUrl: `${host}/Ashx/DZZXChart/min_program.ashx?type=get_product_pricetype`,
 }
 
 module.exports = config

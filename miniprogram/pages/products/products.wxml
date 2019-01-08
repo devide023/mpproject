@@ -18,7 +18,7 @@
 <view class="page" style='margin-top:50px;'>
   <view class='page__bd'>
     <!--线路列表-->
-    <navigator wx:for="{{line_list}}" wx:key="unique" url="/pages/product_info/product_info?line_id={{item.line_id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <navigator wx:for="{{line_list}}" wx:key="unique" url="/pages/product_booking/product_booking?line_id={{item.line_id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
       <view class="weui-cell__hd">
         <image src="{{host}}{{item.img}}" class='line_head_img' mode='widthFix'></image>
       </view>
