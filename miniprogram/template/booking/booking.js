@@ -38,6 +38,19 @@ function Init_productbooking(that)
       'line.pricetypeIndex':e.detail.value
     });
   };
+  /**
+   * 编辑客人信息
+   */
+  that["edit_client_info"]=function(e){
+    console.log(e);
+    let client_index = e.currentTarget.dataset.index;
+    let client = that.data.clients[client_index];
+    console.log(client);
+    let parm = JSON.stringify(client);
+    wx.navigateTo({
+      url: "/pages/edit_client_info/edit_client_info?index=" + client_index + "&data=" + parm,
+    });
+  };
 
 }
 

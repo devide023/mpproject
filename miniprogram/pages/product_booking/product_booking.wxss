@@ -1,1 +1,2 @@
-/* pages/product_booking/product_booking.wxss */
+@import "../../slide_view.wxss";
+@import "../../template/client_bill_item/client_bill_item.wxss";

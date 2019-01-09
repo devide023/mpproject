@@ -34,7 +34,43 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    let clients = wx.getStorageSync("client_list");
+    let client_modify = wx.getStorageSync("client_info_changed");
+    let client_index = wx.getStorageSync("client_index");
+    //添加客人
+    if (typeof(clients) == "object") {
+      let pos = this.data.clients.length;
+      this.setData({
+        ["clients[" + pos + "]"]: clients
+      });
+      wx.removeStorageSync("client_list");
+    }
+    //修改客人信息
+    if (typeof(client_modify) == "object") {
+      var i = client_modify.client_index;
+      this.setData({
+        ["clients[" + i + "]"]: {
+          client_name: client_modify.client_name,
+          client_cer_number: client_modify.client_cer_number,
+          client_tel: client_modify.client_tel,
+          client_certype: client_modify.client_certype,
+          client_sex: client_modify.client_sex,
+          client_birthday: client_modify.client_birthday,
+          cer_types_index: client_modify.cer_types_index,
+          sexindex: client_modify.sexindex
+        }
+      });
+      wx.removeStorageSync("client_info_changed");
+    }
+    //删除客人
+    if (typeof(client_index) == "string" && client_index != "" && client_index != "NaN") {
+      let newlist = this.data.clients;
+      newlist.splice(client_index, 1);
+      this.setData({
+        clients: newlist
+      });
+      wx.removeStorageSync("client_index");
+    }
   },
 
   /**

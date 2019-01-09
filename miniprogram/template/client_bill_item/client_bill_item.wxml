@@ -1,3 +1,10 @@
-<template name="client_bill">
-  client_bill
+<template name="client_bill_item">
+  <view class='client-bill-item'>
+    <view><view class='fa fa-user fa-fw fa-lg bg-green client-item-icon'></view>{{client_name}}</view>
+    <view><view class='fa {{client_sex=="男"?"fa-mars":"fa-venus"}} fa-fw fa-lg bg-green client-item-icon'></view>{{client_sex}}</view>
+    <view><view class='fa fa-id-card fa-fw fa-lg bg-green client-item-icon'></view>{{client_cer_number}}</view>
+    <view><view class='fa fa-phone fa-fw fa-lg bg-green client-item-icon'></view>{{client_tel}}</view>
+    <view><view class='fa fa-vcard fa-fw fa-lg bg-green client-item-icon'></view>{{client_certype}}</view>
+    <view><view class='fa fa-calendar fa-fw fa-lg bg-green client-item-icon'></view>{{client_birthday}}</view>
+  </view>
 </template>

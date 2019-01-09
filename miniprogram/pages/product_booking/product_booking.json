@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "add_clients_button": "/components/add_client_btncom/add_client_btncom",
+    "slide-view": "/components/slide_view/slide_view"
+  }
 }

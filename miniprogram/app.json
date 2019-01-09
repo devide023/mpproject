@@ -13,7 +13,7 @@
     "pages/product_booking/product_booking"
   ],
   "tabBar": {
-    "backgroundColor": "#292929",
+    "backgroundColor": "#f1f1f1",
     "selectedColor": "red",
     "color": "#6e6d6b",
     "list": [
@@ -44,11 +44,10 @@
     ]
   },
   "window": {
-    "backgroundTextStyle": "white",
-    "navigationBarBackgroundColor": "#292929",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#f8f8f8",
     "navigationBarTitleText": "定制中心",
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#DCDCDC"
+    "backgroundColor": "#f8f8f8"
   },
   "debug": true,
   "resizable": true,

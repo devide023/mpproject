@@ -1,4 +1,4 @@
-<import src="../client_bill/client_bill_item.wxml" />
+<import src="../client_bill_item/client_bill_item.wxml" />
 <template name="product_booking">
   <view class='page'>
     <view class='page__bd'>
@@ -59,7 +59,13 @@
       </view>
 
       <view class="weui-cells__title">出行名单</view>
-      <template is="client_bill" data="{{clients}}"></template>
+
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell" hover-class="weui-cell_active" bindtap='edit_client_info' data-index='{{index}}' wx:for="{{clients}}" wx:key="unique">
+          <template is="client_bill_item" data="{{...item}}"></template>
+        </view>
+      </view>
+
     </view>
   </view>
 </template>
